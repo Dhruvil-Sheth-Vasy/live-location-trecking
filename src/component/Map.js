@@ -63,8 +63,9 @@ export default function Map(props) {
   //   scale : 8 ,
   //   strokeColor : "#393"
   // }
-
+// console.log("hh")
   const options = {
+
     strokeColor: "#FF0000",
     strokeOpacity: 0.8,
     strokeWeight: 5,
