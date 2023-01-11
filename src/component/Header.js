@@ -4,6 +4,8 @@ import DatePicker from "react-datepicker";
 import { posActions } from "../store/pos-slice";
 import "react-datepicker/dist/react-datepicker.css";
 
+const DUMMY_USER = ['1','2','3','4']
+
 const month_names_short = [
   "Jan",
   "Feb",
@@ -33,6 +35,7 @@ const Header = (props) => {
 
   const selectedUser = (event) => {
     setUser(event.target.value);
+    // console.log(event.target)
     dispatch(posActions.changeUser(event.target.value));
   };
   const dateHandler = (startDate) => {
@@ -62,10 +65,12 @@ const Header = (props) => {
           name="user"
           onClick={selectedUser}
         >
-          <option value>Default</option>
-          <option value="1">1</option>
+          <option value='default'>Default</option>
+          {DUMMY_USER.map((user)=><option value={user} key={user}>{user}</option>)}
+          <option value='all'>All</option>
+          {/* <option value="1">1</option>
           <option value="2">2</option>
-          <option value="Aniket">Aniket</option>
+          <option value="Aniket">Aniket</option> */}
         </select>
       </div>
       <DatePicker

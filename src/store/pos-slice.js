@@ -24,13 +24,17 @@ const date = `${day}-${
 const posSlice = createSlice({
   name: "pos",
   initialState: {
-    pos: [{ lat: 23.022, lng: 72.57 }],
+    position: [{ lat: 23.022, lng: 72.57 }],
+    marker : [{ lat: 23.022, lng: 72.57 }],
     date: date,
-    user: "default",
+    user: [],
   },
   reducers: {
     position(state, action) {
-      state.pos = action.payload;
+      state.position = action.payload;
+    },
+    marker(state, action) {
+      state.marker = action.payload;
     },
     addData(state, action) {
       state.pos = action.payload;

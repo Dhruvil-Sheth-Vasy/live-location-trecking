@@ -7,6 +7,7 @@ import Header from "./component/Header";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import MultipleUser from "./component/MultipleUser";
 // // TODO: Add SDKs for Firebase products that you want to use
 // // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -32,6 +33,7 @@ export default function App() {
     <main id="map">
       <Header />
       <Map />
+      {/* <MultipleUser/> */}
     </main>
   );
 }
